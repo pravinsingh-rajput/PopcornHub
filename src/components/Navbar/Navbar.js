@@ -20,28 +20,26 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="navbar_wrapper">
-        <div className="navbar_container">
-          <h2 onClick={homenavigate} className="navtitle">
-            PopcornHub
-          </h2>
-          <nav>
-            <div className="desktop_menu">
-              <NavLink to="/movie">Movie</NavLink>
-              <NavLink to="/tvshow">Tv Show</NavLink>
-            </div>
-            <SearchIcon style={{ cursor: "pointer" }} />
-            <div className="hamburger_menu" onClick={toggleMenu}>
-              {mobile ? (
-                <CloseIcon style={{ cursor: "pointer" }} />
-              ) : (
-                <MenuIcon style={{ cursor: "pointer" }} />
-              )}
-            </div>
-          </nav>
-        </div>
+      <div className="navbar_container">
+        <h2 onClick={homenavigate} className="navtitle">
+          PopcornHub
+        </h2>
+        <nav>
+          <div className="desktop_menu">
+            <NavLink to="/movie">Movie</NavLink>
+            <NavLink to="/tvshow">Tv Show</NavLink>
+          </div>
+          <SearchIcon style={{ cursor: "pointer" }} />
+          <div className="hamburger_menu" onClick={toggleMenu}>
+            {mobile ? (
+              <CloseIcon style={{ cursor: "pointer" }} />
+            ) : (
+              <MenuIcon style={{ cursor: "pointer" }} />
+            )}
+          </div>
+        </nav>
       </div>
-      <div>
+      <div className="navbar_wrapper">
         {mobile && (
           <div className="mobile_menu">
             <NavLink onClick={toggleMenu} to="/movie">
