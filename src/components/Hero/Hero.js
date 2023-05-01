@@ -35,7 +35,7 @@ const Hero = () => {
         backgroundPosition: "center center",
       }}
     >
-      <div className="hero_Content">
+      {/* <div className="hero_Content">
         <h1 className="title">Welcome</h1>
         <span className="title_description">
           Explore a wide range of movies and TV shows on our website and watch
@@ -55,7 +55,7 @@ const Hero = () => {
         </form>
 
         <div className="opacity_layer"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
