@@ -21,6 +21,7 @@
   left: 0;
   overflow: hidden;
   opacity: 0.5;
+  z-index: 1;
 }
 
 .opacity_layer {
@@ -40,7 +41,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   padding: 10px;
   width: 90%;
   text-align: center;
