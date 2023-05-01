@@ -30,7 +30,11 @@ const Hero = () => {
     <div className="hero_section">
       {!loading && (
         <div className="background_img">
-          <LazyImage src={bgimg} />{" "}
+          <LazyImage
+            src={
+              "https://media-assets.wired.it/photos/615daf9f8bf8c165f8f22456/16:9/w_2580,c_limit/wired_placeholder_dummy.png"
+            }
+          />{" "}
         </div>
       )}
 
