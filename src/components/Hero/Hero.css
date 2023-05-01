@@ -20,7 +20,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .opacity_layer {
@@ -42,10 +42,14 @@
   align-items: center;
   z-index: 1;
   padding: 10px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   max-width: 1000px;
   line-height: 1.5;
+}
+
+.title {
+  font-size: 50px;
 }
 
 form {
@@ -73,6 +77,7 @@ input {
   border: none;
   border-radius: 0 25px 25px 0;
   font-size: 17.5px;
+  text-align: center;
   color: #ffff;
   background: rgb(238, 110, 4);
   background: linear-gradient(
@@ -80,4 +85,106 @@ input {
     rgba(238, 110, 4, 1) 32%,
     rgba(246, 87, 87, 1) 76%
   );
+}
+
+@media only screen and (max-width: 880px) {
+  .hero_section {
+    width: 100%;
+    height: 400px;
+  }
+  .opacity_layer {
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hero_section {
+    width: 100%;
+    height: 320px;
+  }
+
+  .hero_Content {
+    width: 90%;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+  .opacity_layer {
+    height: 60px;
+  }
+  input {
+    padding: 10px 15px;
+    font-size: 17px;
+    width: 320px;
+  }
+  .home_search {
+    padding: 10px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .hero_section {
+    width: 100%;
+    height: 250px;
+  }
+
+  .hero_Content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .title_description {
+    font-size: 14px;
+  }
+  .opacity_layer {
+    height: 40px;
+  }
+  input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 250px;
+  }
+  .home_search {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .hero_section {
+    width: 100%;
+    height: 220px;
+  }
+  form {
+    margin-top: 10px;
+  }
+
+  .hero_Content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .title_description {
+    font-size: 13.5px;
+  }
+  .opacity_layer {
+    height: 35px;
+  }
+  input {
+    padding: 7px 10px;
+    font-size: 16px;
+    width: 250px;
+  }
+  .home_search {
+    padding: 7px;
+    font-size: 16px;
+  }
 }
