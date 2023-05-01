@@ -27,17 +27,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero_section">
-      {!loading && (
-        <div className="background_img">
-          <LazyImage
-            src={
-              "https://media-assets.wired.it/photos/615daf9f8bf8c165f8f22456/16:9/w_2580,c_limit/wired_placeholder_dummy.png"
-            }
-          />{" "}
-        </div>
-      )}
-
+    <div
+      className="hero_section"
+      style={{
+        backgroundImage: `url(${bgimg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      }}
+    >
       <div className="hero_Content">
         <h1 className="title">Welcome</h1>
         <span className="title_description">
