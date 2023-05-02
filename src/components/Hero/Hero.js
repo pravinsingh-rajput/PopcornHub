@@ -38,26 +38,28 @@ const Hero = () => {
         backgroundPosition: "center center",
       }}
     >
-      <h1 className="title">Welcome</h1>
-      <span className="title_description">
-        Explore a wide range of movies and TV shows on our website and watch
-        your favorite titles anytime, anywhere, on any device.
-      </span>
+      <div className="hero_container">
+        <h1 className="title">Welcome</h1>
+        <span className="title_description">
+          Explore a wide range of movies and TV shows on our website and watch
+          your favorite titles anytime, anywhere, on any device.
+        </span>
 
-      <form onSubmit={handleSubmit} className="home_search_form">
-        <input
-          type="text"
-          value={search}
-          onChange={inputHandler}
-          placeholder="Search Movies & TvShows ....."
-          className="home_search"
-        />
-        <button onClick={handleSubmit} className="home_search_btn">
-          Search
-        </button>
-      </form>
+        <form onSubmit={handleSubmit} className="home_search_form">
+          <input
+            type="text"
+            value={search}
+            onChange={inputHandler}
+            placeholder="Search Movies & TvShows ....."
+            className="home_search"
+          />
+          <button onClick={handleSubmit} className="home_search_btn">
+            Search
+          </button>
+        </form>
 
-      <div className="opacity_layer"></div>
+        <div className="opacity_layer"></div>
+      </div>
     </div>
   );
 };
