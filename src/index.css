@@ -5,7 +5,6 @@
   box-sizing: border-box;
   background: transparent;
   color: #ffff;
-  user-select: none;
 }
 
 ::-webkit-scrollbar {

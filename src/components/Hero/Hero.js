@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import "./Hero.css";
 
 const Hero = () => {
   const [bgimg, setBgimg] = useState("");
   const { url } = useSelector((state) => state.home);
   const { data } = useFetch("/movie/upcoming");
+  const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
 
@@ -23,6 +25,8 @@ const Hero = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSearch("");
+    navigate("/search");
   };
 
   return (
@@ -40,14 +44,15 @@ const Hero = () => {
         your favorite titles anytime, anywhere, on any device.
       </span>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="home_search_form">
         <input
           type="text"
           value={search}
           onChange={inputHandler}
           placeholder="Search Movies & TvShows ....."
+          className="home_search"
         />
-        <button onClick={handleSubmit} className="home_search">
+        <button onClick={handleSubmit} className="home_search_btn">
           Search
         </button>
       </form>
