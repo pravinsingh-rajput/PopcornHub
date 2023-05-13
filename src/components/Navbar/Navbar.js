@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate("/search");
+    navigate(`/search`);
     setNavInput("");
     setsearch(false);
   };
@@ -59,14 +59,14 @@ const Navbar = () => {
             <NavLink
               className="mobile_nav_item"
               onClick={toggleMenu}
-              to="/movie"
+              to="explore/movie"
             >
               Movie
             </NavLink>
             <NavLink
               className="mobile_nav_item"
               onClick={toggleMenu}
-              to="/tvshow"
+              to="explore/tvshow"
             >
               Tv Show
             </NavLink>

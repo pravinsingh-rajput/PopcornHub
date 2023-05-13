@@ -16,7 +16,6 @@ const Hero = () => {
     const bg =
       url?.backdrop +
       data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
-    console.log(bg);
     setBgimg(bg);
   }, [data, url]);
 
@@ -25,8 +24,8 @@ const Hero = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate(`/search/${search}`);
     setSearch("");
-    navigate("/search");
   };
 
   return (

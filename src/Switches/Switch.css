@@ -1,0 +1,44 @@
+.switch {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2px;
+  position: relative;
+}
+
+.switch_items {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.tab_item {
+  width: 70px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 4px 6px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.moving_bg {
+  position: absolute;
+  background: rgb(238, 110, 4);
+  background: linear-gradient(
+    133deg,
+    rgba(238, 110, 4, 1) 31%,
+    rgb(255, 60, 60) 74%
+  );
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 27px;
+  border-radius: 12px;
+  box-shadow: 0.2px 0.2px 5px black;
+  transition: all 0.4s ease-in-out;
+}
+
+.active {
+  color: #ffffff;
+}
