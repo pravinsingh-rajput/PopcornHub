@@ -38,7 +38,7 @@ const Hero = () => {
       }}
     >
       <div className="hero_container">
-        <h1 className="title">Welcome</h1>
+        <h1 className="hero_label">Welcome</h1>
         <span className="title_description">
           Explore a wide range of movies and TV shows on our website and watch
           your favorite titles anytime, anywhere, on any device.

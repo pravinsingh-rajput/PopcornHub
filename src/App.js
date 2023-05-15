@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import fetchdata from "./utils/API";
 import { useSelector, useDispatch } from "react-redux";
-import { APIConfiguartion } from "./Store/HomeSlice";
+import { APIConfiguartion, getgenres } from "./Store/HomeSlice";
 import { Route, Routes } from "react-router";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
@@ -11,12 +11,9 @@ import Search from "./components/Search/Search";
 
 function App() {
   const dispatch = useDispatch();
-
-  const url = useSelector((state) => state.home);
-  console.log(url);
-
   useEffect(() => {
     getConfiguration();
+    genrescall();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -32,6 +29,25 @@ function App() {
 
       dispatch(APIConfiguartion(url));
     });
+  };
+
+  const genrescall = async () => {
+    let promises = [];
+    let genrestype = ["tv", "movie"];
+    let allgenres = {};
+
+    genrestype.forEach((type) => {
+      promises.push(fetchdata(`/genre/${type}/list`));
+    });
+
+    const data = await Promise.all(promises);
+    console.log(data);
+
+    data.map(({ genres }) => {
+      return genres.map((item) => (allgenres[item.id] = item));
+    });
+
+    dispatch(getgenres(allgenres));
   };
 
   return (

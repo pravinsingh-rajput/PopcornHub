@@ -27,21 +27,25 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search`);
+    navigate(`/search/${navinput}`);
     setNavInput("");
     setsearch(false);
   };
 
+  const topnavigate = () => {
+    window.scroll(0, 0);
+  };
+
   return (
-    <div className="navbar">
+    <div className="navbar" onClick={topnavigate}>
       <div className="navbar_container">
         <h2 onClick={homenavigate} className="navtitle">
           PopcornHub
         </h2>
         <nav>
           <div className="desktop_menu">
-            <NavLink to="/movie">Movie</NavLink>
-            <NavLink to="/tvshow">Tv Show</NavLink>
+            <NavLink to="/explore/movie">Movie</NavLink>
+            <NavLink to="/explore/tvshow">Tv Show</NavLink>
           </div>
           <SearchIcon style={{ cursor: "pointer" }} onClick={togglesearch} />
           <div className="hamburger_menu" onClick={toggleMenu}>

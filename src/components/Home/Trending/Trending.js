@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Switch from "../../../Switches/Switch";
 import "./Trending.css";
-import fetchdata from "../../../utils/API";
+import useFetch from "../../../hooks/useFetch";
 import Carousel from "../../Carousel/Carousel";
 
 const Trending = () => {
   const [tredingtime, setTrendingTime] = useState("day");
 
-  const { data, loading } = fetchdata(`/trending/all/${tredingtime}`);
+  const { data, loading } = useFetch(`/trending/all/${tredingtime}`);
 
   const onTabChange = (tab) => {
     setTrendingTime(tab === "Day" ? "day" : "week");

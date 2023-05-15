@@ -6,13 +6,13 @@ const Switch = ({ data, onTabChange }) => {
   const [left, setLeft] = useState(0);
 
   const activeTab = (tab, index) => {
-    setLeft(index * 72);
+    setLeft(index * 70);
 
     setTimeout(() => {
       setSelectedTab(index);
     }, 300);
 
-    onTabChange(tab, index);
+    onTabChange(tab);
   };
 
   return (
