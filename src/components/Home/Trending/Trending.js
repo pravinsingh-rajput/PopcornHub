@@ -14,8 +14,8 @@ const Trending = () => {
   };
 
   return (
-    <div className="trending">
-      <div className="trending_container">
+    <div className="home_conatiners">
+      <div className="carousel_wrapper">
         <span className="carousel_title">Trending</span>
         <Switch data={["Day", "Week"]} onTabChange={onTabChange} />
       </div>

@@ -8,7 +8,7 @@ import "./Carousel.css";
 import Rating from "../Rating/Rating";
 import Genres from "../genres/genres";
 
-const Carousel = ({ data, loading }) => {
+const Carousel = ({ data, loading, trendingtype }) => {
   const { url } = useSelector((state) => state.home);
   console.log(url);
   console.log(data?.results);
@@ -48,7 +48,9 @@ const Carousel = ({ data, loading }) => {
             <div
               key={item.id}
               className="carousel_item"
-              onClick={() => navigate(`/${item.media_type}/${item.id}`)}
+              onClick={() =>
+                navigate(`/${item.media_type || trendingtype}/${item.id}`)
+              }
             >
               <div className="poster">
                 <div className="poster_img skeleton">

@@ -1,7 +1,7 @@
 .carousel {
   width: 100%;
   height: fit-content;
-  padding: 0px 15px;
+  padding: 0px 5px;
   position: relative;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .carousel_item {
-  height: 350px;
+  height: fit-content;
   margin: 4px;
   margin-left: 0px;
   padding: 4px;
@@ -90,9 +90,6 @@
 }
 
 @media (max-width: 800px) {
-  .carousel {
-    padding: 0px 10px;
-  }
   .poster {
     width: 155px;
     height: 230px;
