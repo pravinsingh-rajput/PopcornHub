@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import dayjs from "dayjs";
 import LazyLoadImage from "../LazyLoad/LazyLoadImage";
 import Noposter from "../../Assets/no-poster.png";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import "./Carousel.css";
 import Rating from "../Rating/Rating";
 import Genres from "../genres/genres";
@@ -12,15 +13,43 @@ const Carousel = ({ data, loading }) => {
   console.log(url);
   console.log(data?.results);
 
+  const navigate = useNavigate();
+
+  const carouselContainer = useRef();
+
+  const scroll = (dir) => {
+    const container = carouselContainer.current;
+
+    const scrollAmount =
+      dir === "left"
+        ? container.scrollLeft - (container.offsetWidth - 60)
+        : container.scrollLeft + (container.offsetWidth - 60);
+
+    container.scrollTo({
+      left: scrollAmount,
+    });
+  };
+
   return (
     <div className="carousel">
-      <div className="carousel_container">
+      <div className="scroll_icon left" onClick={() => scroll("left")}>
+        <code>&lt;</code>
+      </div>
+      <div className="scroll_icon right" onClick={() => scroll("right")}>
+        <code>&gt;</code>
+      </div>
+
+      <div className="carousel_container" ref={carouselContainer}>
         {data?.map((item) => {
           const posterurl = item.poster_path
             ? url.poster + item.poster_path
             : Noposter;
           return (
-            <div key={item.id} className="carousel_item">
+            <div
+              key={item.id}
+              className="carousel_item"
+              onClick={() => navigate(`/${item.media_type}/${item.id}`)}
+            >
               <div className="poster">
                 <div className="poster_img skeleton">
                   <LazyLoadImage src={posterurl} />
