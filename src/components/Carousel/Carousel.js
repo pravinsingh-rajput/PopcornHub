@@ -10,7 +10,6 @@ import Genres from "../genres/genres";
 
 const Carousel = ({ data, loading, trendingtype }) => {
   const { url } = useSelector((state) => state.home);
-  console.log(url);
   console.log(data?.results);
 
   const navigate = useNavigate();
@@ -56,7 +55,9 @@ const Carousel = ({ data, loading, trendingtype }) => {
                 <div className="poster_img skeleton">
                   <LazyLoadImage src={posterurl} />
                 </div>
-                <Rating rating={item.vote_average.toFixed(1)} />
+                <div className="vote_rating">
+                  <Rating rating={item.vote_average.toFixed(1)} />
+                </div>
                 <Genres data={item.genre_ids.slice(0, 2)} />
               </div>
               <div className="details_container">

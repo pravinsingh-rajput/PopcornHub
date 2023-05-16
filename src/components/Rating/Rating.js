@@ -15,7 +15,6 @@ const Rating = ({ rating }) => {
           textColor: "#fff",
           pathColor: rating < 5 ? "red" : rating < 7 ? "orange" : "green",
           textSize: "34px",
-          trailColor: "transparent",
         })}
       />
     </div>

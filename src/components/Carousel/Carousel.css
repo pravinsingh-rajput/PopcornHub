@@ -74,6 +74,15 @@
   right: 20px;
 }
 
+.vote_rating {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  bottom: 4px;
+  left: 8px;
+}
+
 /* Loading Skeleton */
 
 .skeleton {

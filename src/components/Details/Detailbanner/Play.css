@@ -1,0 +1,15 @@
+.play_btn {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background-color: red;
+  padding: 4px 8px;
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tailer_label {
+  font-size: 16px;
+}
