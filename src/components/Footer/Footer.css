@@ -10,7 +10,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(20, 20, 20);
+  background-color: rgba(43, 42, 42, 0.349);
 }
 
 .footer_container {

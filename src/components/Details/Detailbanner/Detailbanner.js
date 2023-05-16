@@ -8,6 +8,8 @@ import Noposter from "../../../Assets/no-poster.png";
 import dayjs from "dayjs";
 import Rating from "../../Rating/Rating";
 import Play from "./Play";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Detailbanner = () => {
   const { url } = useSelector((state) => state.home);
@@ -81,17 +83,17 @@ const Detailbanner = () => {
                   </div>
                 </div>
                 <div className="director_detail">
-                  Director: <span className="otherinfo">{data?.status}</span>
+                  Director: <span className="otherinfo"> {data?.status}</span>
                 </div>
                 <div className="writer_details">
-                  Writer: <span className="otherinfo">{data?.status}</span>
+                  Writer: <span className="otherinfo"> {data?.status}</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <div> Laoding</div>
+        <h1>Loading....</h1>
       )}
     </div>
   );

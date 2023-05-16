@@ -60,8 +60,8 @@ function App() {
           <Route path="/search/:query" element={<Search />} />
           <Route path="/:mediaType/:id" element={<Details />} />
         </Routes>
-        <Navbar />
       </div>
+      <Navbar />
     </div>
   );
 }

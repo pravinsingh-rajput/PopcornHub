@@ -29,6 +29,11 @@ const Carousel = ({ data, loading, trendingtype }) => {
     });
   };
 
+  const detailpage = (type, id) => {
+    navigate(`/${type}/${id}`);
+    window.scroll(0, 0);
+  };
+
   return (
     <div className="carousel">
       <div className="scroll_icon left" onClick={() => scroll("left")}>
@@ -48,7 +53,7 @@ const Carousel = ({ data, loading, trendingtype }) => {
               key={item.id}
               className="carousel_item"
               onClick={() =>
-                navigate(`/${item.media_type || trendingtype}/${item.id}`)
+                detailpage(item.media_type || trendingtype, item.id)
               }
             >
               <div className="poster">
