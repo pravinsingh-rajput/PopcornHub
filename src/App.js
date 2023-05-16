@@ -9,6 +9,8 @@ import Home from "./components/Home/Home";
 import Explore from "./components/Explore/Explore";
 import Search from "./components/Search/Search";
 import Details from "./components/Details/Details";
+import Error from "./components/Error/Error";
+import Nodata from "./components/Error/Nodata";
 
 function App() {
   const dispatch = useDispatch();
@@ -59,6 +61,8 @@ function App() {
           <Route path="/explore/:mediaType" element={<Explore />} />
           <Route path="/search/:query" element={<Search />} />
           <Route path="/:mediaType/:id" element={<Details />} />
+          <Route path="/undefined/:id" element={<Nodata />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
       <Navbar />

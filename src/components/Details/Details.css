@@ -35,10 +35,14 @@
 .profile:hover {
   width: 150px;
   height: 150px;
-  border-radius: 0px;
+  border-radius: 12px;
 }
 
 .cast_name {
   color: rgb(145, 143, 143);
   font-size: 14px;
+}
+
+.otherinfo {
+  margin-left: 4px;
 }

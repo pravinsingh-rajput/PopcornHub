@@ -14,13 +14,16 @@ const Details = () => {
 
   const { url } = useSelector((state) => state.home);
 
-  const { data } = useFetch(`/${mediaType}/${id}/videos`);
+  const { data: videos } = useFetch(`/${mediaType}/${id}/videos`);
   const { data: credits } = useFetch(`/${mediaType}/${id}/credits`);
   const { data: similar } = useFetch(`/${mediaType}/${id}/similar`);
+  const { data: recommendations } = useFetch(
+    `/${mediaType}/${id}/recommendations`
+  );
 
   return (
     <div className="details">
-      <Detailbanner />
+      <Detailbanner video={videos?.results?.[0]} crew={credits?.crew} />
       <div className="topCast_container">
         <p className="detail_page_label">Top Cast</p>
         <div className="topCast">
@@ -45,6 +48,10 @@ const Details = () => {
       <div className="similar">
         <p className="detail_page_label">Similar {mediaType}</p>
         <Carousel data={similar?.results} />
+      </div>
+      <div className="recommendation">
+        <p className="detail_page_label">Recommended {mediaType}</p>
+        <Carousel data={recommendations?.results} />
       </div>
       <Footer />
     </div>

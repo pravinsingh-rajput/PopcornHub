@@ -7,7 +7,7 @@
   padding: 10px;
   padding-top: 45px;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   background: linear-gradient(
     180deg,
     rgba(10, 10, 10, 0.815) 0%,
@@ -62,12 +62,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  width: 220px;
+  width: 150px;
 }
 
 .otherdetails,
-.director_detail,
-.writer_details {
+.writer_detail,
+.creator_detail,
+.director_detail {
   display: flex;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -79,6 +80,7 @@
   align-items: center;
   padding: 5px;
   width: 65%;
+  height: fit-content;
 }
 
 .moredetails {
@@ -94,7 +96,8 @@
 .overview_Label,
 .overview,
 .otherdetails,
-.writer_details,
+.writer_detail,
+.creator_detail,
 .director_detail {
   margin-top: 12px;
   color: #ffffff;

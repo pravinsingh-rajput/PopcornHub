@@ -11,13 +11,18 @@ import Play from "./Play";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const Detailbanner = () => {
+const Detailbanner = ({ crew, video }) => {
   const { url } = useSelector((state) => state.home);
   const { mediaType, id } = useParams();
 
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
   const moviebg = url.backdrop + data?.backdrop_path;
+  const director = crew?.filter((find) => find.job === "Director");
+  const writer = crew?.filter(
+    (find) =>
+      find.job === "Screenplay" || find.job === "Story" || find.job === "Writer"
+  );
 
   const posterurl = data?.poster_path
     ? url.poster + data.poster_path
@@ -61,33 +66,67 @@ const Detailbanner = () => {
                 <div className="detailed_rating">
                   <Rating rating={data?.vote_average.toFixed(1)} />
                 </div>
-                <Play />
+                <Play data={data?.homepage} />
               </div>
               <div className="overview_conatiner">
                 <div className="overview_Label">Overview</div>
                 <p className="overview">{data?.overview}</p>
                 <div className="otherdetails">
                   <div className="other_info_item">
-                    Status: <span className="otherinfo">{data?.status}</span>
+                    Status:<span className="otherinfo">{data?.status}</span>
                   </div>
                   <div className="other_info_item">
-                    Released Date:{" "}
+                    Released Date:
                     <span className="otherinfo">
                       {dayjs(data?.release_date).format("MMM DD, YYYY")}
                     </span>
                   </div>
 
                   <div className="other_info_item">
-                    Runtime:{" "}
+                    Runtime:
                     <span className="otherinfo">{time(data?.runtime)}</span>
                   </div>
                 </div>
-                <div className="director_detail">
-                  Director: <span className="otherinfo"> {data?.status}</span>
-                </div>
-                <div className="writer_details">
-                  Writer: <span className="otherinfo"> {data?.status}</span>
-                </div>
+                {director?.length > 0 && (
+                  <div className="director_detail">
+                    Director:{" "}
+                    <span className="otherinfo">
+                      {director.map((name, index) => (
+                        <span>
+                          {" "}
+                          {name.name} {director.length - 1 !== index && ","}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
+                )}
+                {writer?.length > 0 && (
+                  <div className="writer_detail">
+                    Writer:{" "}
+                    <span className="otherinfo">
+                      {writer.map((name, index) => (
+                        <span>
+                          {" "}
+                          {name.name} {writer.length - 1 !== index && ","}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
+                )}
+                {data?.created_by?.length > 0 && (
+                  <div className="_detail">
+                    Writer:{" "}
+                    <span className="otherinfo">
+                      {data?.created_by.map((name, index) => (
+                        <span>
+                          {" "}
+                          {name.name}{" "}
+                          {data?.created_by.length - 1 !== index && ", "}
+                        </span>
+                      ))}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
