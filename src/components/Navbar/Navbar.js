@@ -14,6 +14,11 @@ const Navbar = () => {
 
   const homenavigate = () => {
     navigate("/");
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   const toggleMenu = () => {
@@ -33,7 +38,11 @@ const Navbar = () => {
   };
 
   const topnavigate = () => {
-    window.scroll(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   return (

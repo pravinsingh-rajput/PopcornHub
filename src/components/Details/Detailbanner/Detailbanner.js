@@ -8,8 +8,6 @@ import Noposter from "../../../Assets/no-poster.png";
 import dayjs from "dayjs";
 import Rating from "../../Rating/Rating";
 import Play from "./Play";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 
 const Detailbanner = ({ crew, video }) => {
   const { url } = useSelector((state) => state.home);
@@ -132,7 +130,24 @@ const Detailbanner = ({ crew, video }) => {
           </div>
         </div>
       ) : (
-        <h1>Loading....</h1>
+        <div className="details_banner_conatiner">
+          <div className="left_container">
+            <div className="poster_image ">
+              <div className="skeletondeatils skeleton_img"></div>
+            </div>
+          </div>
+          <div className="right_container skeleton_right">
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+            <div className="skeletondeatils skeleton_text"></div>
+          </div>
+        </div>
       )}
     </div>
   );

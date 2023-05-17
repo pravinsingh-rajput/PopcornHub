@@ -62,7 +62,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  width: 150px;
+  width: 165px;
 }
 
 .otherdetails,
@@ -80,6 +80,7 @@
   align-items: center;
   padding: 5px;
   width: 65%;
+  min-height: 300px;
   height: fit-content;
 }
 
@@ -131,6 +132,10 @@
 .otherinfo {
   color: rgb(155, 152, 152);
   font-size: 14px;
+}
+.skeleton_right {
+  display: block;
+  text-align: left;
 }
 
 /* -/////////////////////////////////////////// */

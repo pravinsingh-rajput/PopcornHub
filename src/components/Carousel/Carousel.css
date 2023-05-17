@@ -83,21 +83,6 @@
   left: 8px;
 }
 
-/* Loading Skeleton */
-
-.skeleton {
-  animation: loading_animation 1s linear infinite alternate;
-}
-
-@keyframes loading_animation {
-  0% {
-    background-color: hsl(200, 20%, 80%);
-  }
-  100% {
-    background-color: hsl(200, 20%, 95%);
-  }
-}
-
 @media (max-width: 800px) {
   .poster {
     width: 155px;

@@ -6,28 +6,24 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
+  const onclickhandle = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer>
       <div className="footer_container">
         <ul class="quick_links">
-          <li>
-            <a href="#">Terms of use</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-          <li>
-            <a href="#">F&Q</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
+          <li onClick={onclickhandle}>Terms of use</li>
+          <li onClick={onclickhandle}>Privacy Policy</li>
+          <li onClick={onclickhandle}>About</li>
+          <li onClick={onclickhandle}>Blog</li>
+          <li onClick={onclickhandle}>F&Q</li>
+          <li onClick={onclickhandle}>Contact Us</li>
         </ul>
         <p className="footer_description">
           Welcome to PopcornHub, your ultimate destination for streaming the
