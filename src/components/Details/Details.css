@@ -6,9 +6,16 @@
 }
 
 .detail_page_label {
-  font-size: 25px;
+  font-size: 18px;
   margin: 12px;
   margin-bottom: 2px;
+}
+
+.label_recommended,
+.label_similar {
+  font-size: 20px;
+  margin: 12px;
+  margin-bottom: 10px;
 }
 
 .topCast {

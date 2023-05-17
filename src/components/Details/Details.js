@@ -45,14 +45,20 @@ const Details = () => {
           })}
         </div>
       </div>
-      <div className="similar">
-        <p className="detail_page_label">Similar {mediaType}</p>
-        <Carousel data={similar?.results} />
-      </div>
-      <div className="recommendation">
-        <p className="detail_page_label">Recommended {mediaType}</p>
-        <Carousel data={recommendations?.results} />
-      </div>
+
+      {similar?.results.length > 0 && (
+        <div className="similar">
+          <p className="label_similar">Similar {mediaType}</p>
+          <Carousel data={similar?.results} trendingtype={mediaType} />
+        </div>
+      )}
+      {recommendations?.results.length > 0 && (
+        <div className="recommendation">
+          <p className="label_recommended">Recommended {mediaType}</p>
+          <Carousel data={recommendations?.results} />
+        </div>
+      )}
+
       <Footer />
     </div>
   );
