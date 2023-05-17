@@ -71,11 +71,13 @@ nav {
 .navbar_search {
   width: 100%;
   padding: 5px 12px;
-  height: fit-content;
+  height: 50px;
   margin-top: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff63;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav_input_search {

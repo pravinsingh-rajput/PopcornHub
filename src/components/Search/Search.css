@@ -1,0 +1,76 @@
+.searchpage {
+  background-color: #04152d;
+  width: 100vw;
+  height: fit-content;
+  padding-top: 50px;
+}
+
+.page_title {
+  font-size: 25px;
+  margin-bottom: 18px;
+  width: 100%;
+  text-align: left;
+}
+
+.search_container {
+  padding: 12px;
+}
+
+.infinite-scroll-component {
+  display: grid;
+  width: fit-content;
+  width: 100%;
+  height: auto;
+  row-gap: 15px;
+  margin: 0 auto;
+  grid-template-columns: repeat(7, minmax(180px, 1fr));
+}
+
+.loadingdata {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1287px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(6, minmax(180px, 1fr));
+  }
+}
+@media screen and (max-width: 1107px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(5, minmax(180px, 1fr));
+  }
+}
+@media screen and (max-width: 917px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+  }
+}
+@media screen and (max-width: 798px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(4, minmax(177px, 1fr));
+  }
+}
+@media screen and (max-width: 715px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(3, minmax(177px, 1fr));
+  }
+}
+@media screen and (max-width: 541px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(2, minmax(177px, 1fr));
+  }
+}
+@media screen and (max-width: 369px) {
+  .infinite-scroll-component {
+    grid-template-columns: repeat(1, minmax(177px, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .loadingimg {
+    width: 100%;
+  }
+}

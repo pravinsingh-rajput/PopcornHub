@@ -6,3 +6,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.errorimg {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .errorimg {
+    width: 100%;
+  }
+}

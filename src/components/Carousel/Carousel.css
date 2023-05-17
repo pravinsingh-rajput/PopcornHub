@@ -83,7 +83,7 @@
   left: 8px;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .poster {
     width: 155px;
     height: 230px;

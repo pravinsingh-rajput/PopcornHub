@@ -10,7 +10,6 @@ import Genres from "../genres/genres";
 
 const Carousel = ({ data, loading, trendingtype }) => {
   const { url } = useSelector((state) => state.home);
-  console.log(data?.results);
 
   const navigate = useNavigate();
 

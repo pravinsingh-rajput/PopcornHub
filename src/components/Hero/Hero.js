@@ -35,6 +35,7 @@ const Hero = () => {
         backgroundImage: `url(${bgimg}) `,
         backgroundSize: "cover",
         backgroundPosition: "center center",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="hero_container">
