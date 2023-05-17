@@ -1,0 +1,8 @@
+.errorpage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #04152d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

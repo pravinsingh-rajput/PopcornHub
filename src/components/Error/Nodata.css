@@ -1,0 +1,14 @@
+.no_data {
+  border: none;
+  height: fit-content;
+  background-color: #04152d;
+}
+.nodata_title {
+  width: 100%;
+  padding: 10px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
