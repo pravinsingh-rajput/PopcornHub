@@ -16,7 +16,7 @@ const Search = () => {
 
   const searchdata = () => {
     setLoading(true);
-    fetchdata(`/search/multi?query=${query}&page=${page}`).then((res) => {
+    fetchdata(`/search/multi?query=${query}`).then((res) => {
       setData(res);
       setPage((prev) => prev + 1);
       setLoading(false);
