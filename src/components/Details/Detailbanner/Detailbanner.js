@@ -51,7 +51,7 @@ const Detailbanner = ({ crew, video }) => {
           <div className="right_container">
             <div className="moredetails">
               <div className="detail_title">
-                {data?.title || data?.name} ({" "}
+                {data?.title || data?.name} (
                 {dayjs(data?.release_date).format("YYYY") ||
                   dayjs(data?.first_air_date).format("YYYY")}
                 )
